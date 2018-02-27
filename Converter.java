@@ -1,4 +1,4 @@
-public class DistanceC{
+public class Converter{
 	
 
 	
