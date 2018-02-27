@@ -8,21 +8,21 @@ public class Main{
 	static String decimeterUnit = "dm";
 	static String meterUnit = "m";
 	static String kilometerUnit = "km";
-	
+	static Boolean isChosen = false; 
 	public static void main(String[] args) {
 		
 		System.out.println("Wybierz rodzaj konwersji:"+"\n1. Odległości");
 		
-		if(userInput.hasNextInt()) {
-			if(userInput.nextInt()==1 ) {
-				System.out.println("Wybierz jednostkę z jakiej chcesz przeliczać:" + "\n1. Metry [m]");
-				if(userInput.hasNextInt() && userInput.nextInt() == 1) {
-					System.out.println("Wybrałeś Metry");
-				} else { System.out.println("Podaj numer wybranej opcji");}
+	while(isChosen == false) {
+			switch (userInput.next()) {
+			
+				case "1": 	System.out.println("Wybrałeś 1");
+							isChosen = true;
+							System.out.println(isChosen);
+							break;
+				default: 	System.out.println("Nie ma takiej opcji");
 			}
-		} else { System.out.println("Podaj numer wybranej opcji");}
-		
-		System.out.println("koniec");
-		
+	}
+		System.out.print("varDump: " + isChosen);
 	}
 }
