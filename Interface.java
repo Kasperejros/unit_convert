@@ -2,6 +2,8 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Interface extends JFrame{
+
+
 	public Interface() {
 		
 		this.setSize(400, 400);
@@ -31,8 +33,8 @@ public class Interface extends JFrame{
 		
 		String[] unitList = {"mm", "cm", "dm", "m", "km"};
 		
-		JComboBox boxSelectInput = new JComboBox(unitList);
-		JComboBox boxSelectOutput = new JComboBox(unitList);
+		JComboBox<?> boxSelectInput = new JComboBox<Object>(unitList);
+		JComboBox<?> boxSelectOutput = new JComboBox<Object>(unitList);
 		
 		inputPanel.add(boxSelectInput);
 		outputPanel.add(boxSelectOutput);
