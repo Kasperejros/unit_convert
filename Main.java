@@ -15,6 +15,7 @@ public class Main{
 	
 	public static void main(String[] args) {
 		
+		new Interface();
 		System.out.println("Wybierz rodzaj konwersji:"+"\n1. Odległości:");
 		
 		while(isChosen == false) {
@@ -106,7 +107,6 @@ public class Main{
 			} else { System.out.println("Podaj wartość liczbową"); userInput.next(); }
 		}
 		outputValue = Converter.Convert(inputMultiplier, outputMultiplier, inputValue);
-		String formatedOutput = String.format("%.09f" , outputValue);
 		System.out.println(inputValue + inputUnit + " to " + outputValue + outputUnit );
 	}	
 }
